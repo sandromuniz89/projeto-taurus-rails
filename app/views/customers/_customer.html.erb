@@ -1,0 +1,39 @@
+<div id="<%= dom_id customer %>">
+  <p>
+    <strong>Name:</strong>
+    <%= customer.name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= customer.email %>
+  </p>
+  <p>
+    <strong>Birthday:</strong>
+    <%= customer.birthday %>
+  </p>
+  <p>
+    <strong>CPF:</strong>
+    <%= customer.cpf %>
+  </p>
+  
+  <%# Verifica se o cliente tem um plano associado %>
+  <% if customer.plano %>
+    <p>
+      <strong>Plano:</strong>
+      <%= customer.plano.nome %>
+    </p>
+    <p>
+      <strong>Conteúdo do Plano:</strong>
+      <%= customer.plano.description %>
+    </p>
+    <p>
+      <strong>Duração do Plano:</strong>
+      <%= customer.plano.duration_days %> dias
+    </p>
+  <% else %>
+    <p>
+      <strong>Plano:</strong> Nenhum plano associado.
+    </p>
+  <% end %>
+  
+</div>

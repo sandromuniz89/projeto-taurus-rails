@@ -1,0 +1,26 @@
+<div id="<%= dom_id plano %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= plano.nome %>
+  </p>
+  <p>
+    <strong>Valor:</strong>
+    <%= number_to_currency(plano.valor, unit: "R$ ", separator: ",", delimiter: ".") %>
+  </p>
+
+  <%# NOVO: Exibe a Descrição %>
+  <p>
+    <strong>Conteúdo:</strong>
+    <%= plano.description %>
+  </p>
+
+  <%# NOVO: Exibe a Duração %>
+  <p>
+    <strong>Duração:</strong>
+    <%= plano.duration_days %> dias
+  </p>
+
+  <p>
+    <%= link_to "Show this plano", plano %>
+  </p>
+</div>

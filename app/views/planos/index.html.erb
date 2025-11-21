@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Planos" %>
+
+<h1>Planos</h1>
+
+<div id="planos">
+  <% @planos.each do |plano| %>
+    <%# INÍCIO - Exibição Simplificada para a Lista %>
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+      <p>
+        <strong>Nome:</strong>
+        <%= plano.nome %>
+      </p>
+      <p>
+        <strong>Valor:</strong>
+        <%= number_to_currency(plano.valor, unit: "R$ ", separator: ",", delimiter: ".") %>
+      </p>
+      <p>
+        <%= link_to "Show this plano", plano %>
+      </p>
+    </div>
+    <%# FIM - Exibição Simplificada %>
+  <% end %>
+</div>
+
+<%= link_to "New plano", new_plano_path %>
