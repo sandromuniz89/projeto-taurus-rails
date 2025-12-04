@@ -47,9 +47,10 @@ Este é um projeto de estudos em Ruby on Rails, focado em construir um sistema d
     `bundle install`
 4.  Crie e configure o banco de dados:
     `rails db:create`
+    depois
     `rails db:migrate`
-5.  Popule o banco com os planos iniciais:
+6.  Popule o banco com os planos iniciais:
     `rails db:seed`
-6.  Inicie o servidor:
+7.  Inicie o servidor:
     `rails server`
-7.  Acesse `http://localhost:3000` no seu navegador.
+8.  Acesse `http://localhost:3000` no seu navegador.
